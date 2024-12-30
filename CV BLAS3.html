@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module">
+        import { characterCursor } from "https://unpkg.com/cursor-effects@latest/dist/esm.js";
+        
+        window.addEventListener("load", () => {
+            new characterCursor({ 
+                characters: ["B", "L", "A", "S", "⚡"],
+                font: "20px serif",
+                colors: [
+                    "#3498db",
+                    "#2980b9",
+                    "#2c3e50",
+                    "#34495e",
+                    "#95a5a6",
+                ]
+            });
+        });
+    </script>
+    <title>Blas Perez - Professional Profile</title>
+    <style>
+:root {
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --text-light: #ecf0f1;
+    --text-dark: #2c3e50;
+    --gradient-start: #2c3e50;
+    --gradient-end: #3498db;
+    --neon-glow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f6fa;
+    cursor: default !important;
+    overflow-x: hidden;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.header {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            min-height: 300px;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%; /* Extendemos hacia la izquierda */
+    right: -50%; /* Extendemos hacia la derecha */
+    bottom: -50%;
+    background: 
+        radial-gradient(circle at 25% 30%, rgba(255,255,255,0.6) 0%, transparent 15%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.6) 0%, transparent 15%);
+    background-size: 100% 100%;
+    animation: particleAnimation 20s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes particleAnimation {
+    0% { 
+        transform: translate(0, 0); 
+    }
+    100% { 
+        transform: translate(25%, -50%); /* Movimiento diagonal */
+    }
+}
+
+.header h1 {
+    color: var(--text-light);
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.header p {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 2;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    z-index: 2;
+    position: relative;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    color: var(--text-light);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 300px;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.4),
+               0 0 30px rgba(52, 152, 219, 0.2);
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.8),
+               0 0 50px rgba(52, 152, 219, 0.4);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: color:brown;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 15px;
+    background: transparent;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--accent-color);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.skills-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.skills-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.skills-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.experience-card {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--accent-color);
+}
+
+.experience-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4),
+                0 0 40px rgba(255, 215, 0, 0.2);
+    border-left: 4px solid #ffd700;
+}
+
+.education-card {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4),
+                0 0 40px rgba(255, 215, 0, 0.2);
+}
+
+.education-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.language-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.language-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.language-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.certification-card {
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.certification-card::before {
+    content: '▸';
+    position: absolute;
+    left: 0.8rem;
+    color: var(--accent-color);
+}
+
+.certification-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.strengths-list,
+.interests-list {
+    list-style: none;
+    padding: 0;
+}
+
+.strengths-list li,
+.interests-list li {
+    background: white;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.strengths-list li::before,
+.interests-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0.8rem;
+    color: var(--accent-color);
+}
+
+.strengths-list li:hover,
+.interests-list li:hover {
+    transform: translateX(10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background: #ffd700;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 5rem;
+        letter-spacing: 2px;
+        line-height: 1.1;
+    }
+
+    .header {
+        padding: 1.5rem 1rem;
+    }
+
+    .header p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .contact-item {
+        width: 100%;
+        max-width: none;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-item i {
+        font-size: 1rem;
+    }
+
+    .scroll-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+    }
+     .main-content {
+        padding: 1rem 0.5rem; /* Reducimos el padding general */
+    }
+
+    section {
+        padding: 1rem 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .skills-category {
+        padding: 1.5rem;
+        width: 100%; /* Aseguramos que tome todo el ancho disponible */
+        margin: 0; /* Eliminamos márgenes laterales */
+        border-radius: 10px;
+    }
+
+    .skills-list li {
+        padding: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Ajustamos el contenedor principal */
+    .container, 
+    .main-content {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Aseguramos que las tarjetas tomen el ancho completo */
+    .experience-card,
+    .education-card,
+    .language-card,
+    .certification-card,
+    .strengths-list li,
+    .interests-list li {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BLAS PEREZ</h1>
+        <p>Digital Business Management Professional</p>
+        
+        <div class="contact-info">
+            <a href="tel:+523333371063" class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+52 33 3337 1063</span>
+            </a>
+            <a href="mailto:Blazberez@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>Blazberez@gmail.com</span>
+            </a>
+            <a href="http://linkedin.com/in/bpecha" class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn Profile</span>
+            </a>
+            <span class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Guadalajara, México</span>
+            </span>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="summary-section">
+            <h2>Professional Profile</h2>
+            <p>Professional with over 4 years of experience in project management, customer support, system troubleshooting, and data-driven solutions. With a degree in Digital Business Management and expertise in SaaS environments, I excel at learning proprietary platforms, resolving technical issues, and creating efficient workflows. My skills include advanced Excel, SQL, HTML, CSS, APIs, Power BI, and creating user-facing documentation.</p>
+            <p>Additionally, I have strong interpersonal and organizational skills, developed through years of bilingual customer service roles. My English proficiency (C1 Advanced) and daily practice over 2 years with a personalized American tutor strengthen my ability to interact effectively in global teams.</p>
+        </section>
+
+        <section class="skills-section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Development & Tools</h3>
+                    <ul class="skills-list">
+                        <li>Technical Support: HTML, CSS, APIs, debugging, and troubleshooting</li>
+                        <li>Data Analysis: Advanced Excel, SQL, process automation, Power BI</li>
+                        <li>Customer Support Tools: CRM, chat and ticketing systems</li>
+                        <li>Documentation Creation: User guides, FAQs, knowledge base</li>
+                        <li>Visualization and Reporting: Interactive dashboards</li>
+                        <li>Design: Adobe Illustrator, Photoshop, branding, UI design</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>General Skills</h3>
+                    <ul class="skills-list">
+                        <li>Team collaboration</li>
+                        <li>Adaptability to fast-paced environments</li>
+                        <li>Effective communication</li>
+                        <li>Strong organizational skills</li>
+                        <li>Problem-solving and critical thinking</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <h2>Professional Experience</h2>
+              <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Bilingual Customer Service Representative</h3>
+                    <div class="company-info">
+                        <span class="company">InTouch | Guadalajara</span>
+                        <span class="date">2024 - Present</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Managed customer inquiries and system-based compensation calculations for online orders</li>
+                    <li>Provided guidance to clients on resolving technical issues with their accounts</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Bilingual Agent - HelloFresh</h3>
+                    <div class="company-info">
+                        <span class="company">XtendOps | Guadalajara</span>
+                        <span class="date">2023 - 2024</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Delivered top-notch customer support by troubleshooting service-related issues</li>
+                    <li>Identified patterns in user problems to recommend process improvements</li>
+                    <li>Assisted in training and mentoring new agents</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Bilingual Customer Retention Specialist</h3>
+                    <div class="company-info">
+                        <span class="company">Teleperformance | Guadalajara</span>
+                        <span class="date">2022 - 2023</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Retained customers by offering personalized promotional packages and resolving inquiries</li>
+                    <li>Provided technical guidance and tailored solutions for service retention</li>
+                    <li>Analyzed customer feedback and suggested product and service enhancements</li>
+                    <li>Cross-sold products such as mobile lines and internet services to increase customer value</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Web Sales and E-Commerce Designer</h3>
+                    <div class="company-info">
+                        <span class="company">Marketing Castell | Guadalajara</span>
+                        <span class="date">2022</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Built an e-commerce platform and integrated it with marketplaces like Amazon</li>
+                    <li>Automated workflows to enhance operational efficiency and data visibility</li>
+                    <li>Designed user-friendly interfaces to optimize customer navigation</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Email Marketing Specialist</h3>
+                    <div class="company-info">
+                        <span class="company">Rino Logistics | Manzanillo</span>
+                        <span class="date">2019 - 2020</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Developed advertising campaigns focusing on regulatory updates (NOMS) for clients</li>
+                    <li>Designed the company website, including its branding, logo, and color palette</li>
+                    <li>Used a CRM to attract new customers, engage current clients, and recover lost accounts</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Administrator and Systems Designer</h3>
+                    <div class="company-info">
+                        <span class="company">Corporativo Internacional Especializado (CIE) | Manzanillo</span>
+                        <span class="date">2018 - 2019</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Designed automated systems to streamline data processes and email communications</li>
+                    <li>Maintained servers and networks while troubleshooting critical issues</li>
+                    <li>Assisted internal teams with technical training and documentation creation</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-header">
+                    <h3>Freelance Technological Innovation Projects</h3>
+                    <div class="company-info">
+                        <span class="company">Manzanillo and Guadalajara</span>
+                        <span class="date">2019 - Present</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>Adapted macOS for non-Apple hardware through Hackintosh configurations</li>
+                    <li>Diagnosed and repaired complex software and hardware issues on mobile devices</li>
+                    <li>Consulted on automation strategies to improve workflows for clients</li>
+                    <li>Developed custom scripts to automate repetitive tasks and improve system performance</li>
+                </ul>
+            </div>
+        </section>
+        <section class="education-section">
+            <h2>Education</h2>
+            <div class="education-card">
+                <h3>Bachelor's Degree in Digital Business Management</h3>
+                <p>Faculty of Accounting and Administration of Manzanillo (FECAM)</p>
+                <span class="date">2015 - 2019</span>
+            </div>
+            <div class="education-card">
+                <h3>Technical Career in Programming and Hardware Maintenance</h3>
+                <p>CEIP, Manzanillo</p>
+                <span class="date">2017 - 2020</span>
+            </div>
+            <div class="education-card">
+                <h3>Advanced English Studies</h3>
+                <p>The Pyramid School</p>
+                <span class="date">2017 - 2020</span>
+                <p>Completed 3 years of advanced English courses with a focus on communication and grammar.</p>
+            </div>
+            <div class="education-card">
+                <h3>Personalized English Training</h3>
+                <p>Private Tutor</p>
+                <span class="date">2020 - 2022</span>
+                <p>Participated in daily English classes with a native-speaking American teacher to refine professional communication skills.</p>
+            </div>
+        </section>
+
+        <section class="languages-section">
+            <h2>Languages</h2>
+            <div class="language-cards">
+                <div class="language-card">
+                    <h3>English</h3>
+                    <p>Advanced level (C1)</p>
+                </div>
+                <div class="language-card">
+                    <h3>Spanish</h3>
+                    <p>Native</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications-section">
+            <h2>Certifications</h2>
+            <div class="certification-card">
+                <h3>EF SET Certificate</h3>
+                <p>Level achieved: C1 Advanced</p>
+                <a href="#" class="view-certificate">View Certificate</a>
+            </div>
+        </section>
+
+        <section class="strengths-section">
+            <h2>Strengths</h2>
+            <ul class="strengths-list">
+                <li>Ability to diagnose root causes of technical issues and provide timely resolutions</li>
+                <li>Expertise in SaaS platforms and customer-facing tools</li>
+                <li>Strong collaboration skills to liaise with internal teams and clients</li>
+                <li>Exceptional problem-solving abilities with a focus on user satisfaction</li>
+                <li>Highly adaptable to new technologies and fast-paced environments</li>
+            </ul>
+        </section>
+
+        <section class="interests-section">
+            <h2>Interests</h2>
+            <ul class="interests-list">
+                <li>Innovation in technology</li>
+                <li>Developing user-centric systems</li>
+                <li>Optimizing workflows through data-driven insights</li>
+                <li>Providing excellent client solutions</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        // Animaciones con GSAP
+        gsap.from('.header h1', {
+            duration: 1.5,
+            y: 30,
+            opacity: 0,
+            ease: 'power4.out'
+        });
+
+        gsap.from('.header p', {
+            duration: 1.5,
+            y: 30,
+            opacity: 0,
+            delay: 0.5,
+            ease: 'power4.out'
+        });
+
+        gsap.from('.contact-info', {
+            duration: 1,
+            y: 30,
+            opacity: 0,
+            delay: 1,
+            ease: 'power3.out'
+        });
+
+        // Animación al hacer scroll
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            gsap.from(section, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                    end: "top 20%",
+                    toggleActions: "play none none reverse"
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                ease: "power3.out"
+            });
+        });
+    </script>
+    <div class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+    <script type="text/javascript">
+        // Botón scroll to top
+const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+    } else {
+        scrollToTopBtn.classList.remove('visible');
+    }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+    </script>
+</div>
+</body>
+</html>
