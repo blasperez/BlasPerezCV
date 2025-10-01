@@ -21,4 +21,8 @@ echo ""
 echo "📋 Pasos para verificar manualmente:"
 echo "1. Ve a https://blasperez.github.io/BlasPerezCV/"
 echo "2. Deberías ver tu CV con diseño azul y animaciones"
+<<<<<<< HEAD
 echo "3. Si no funciona, espera 5-10 minutos y vuelve a intentar"
+=======
+echo "3. Si no funciona, espera 5-10 minutos y vuelve a intentar"
+>>>>>>> f88c68b96f1a90936b58fd5f7766335a4d42f7fa
