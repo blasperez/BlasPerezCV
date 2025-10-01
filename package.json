@@ -1,8 +1,9 @@
 {
-  "name": "protocolo-rino",
+  "name": "blasperez-cv",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
-  "homepage": "https://blasperez.github.io/Protocolo-salesforce-implementacion",
+  "homepage": "https://blasperez.github.io/BlasPerezCV",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
