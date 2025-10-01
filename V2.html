@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Protocolo de Entrenamiento Ventas - Salesforce | Grupo Rino</title>
+  <style>
+    :root{--bg:#f6f8fb;--card:#ffffff;--muted:#6b7280;--accent:#0f6efd;--accent-2:#0b5ed7;--glass:rgba(15,110,253,0.06)}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
+    body{background:linear-gradient(180deg,var(--bg),#eef3ff);color:#0f172a}
+    .container{max-width:1100px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:68px;height:68px;border-radius:12px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:22px}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(12,36,80,0.06)}
+    .kpi{display:flex;gap:12px;align-items:center}
+    .kpi .num{font-size:20px;font-weight:700}
+    nav .pill{display:inline-block;background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--accent-2);font-weight:600;margin-right:8px}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .modules{display:grid;gap:12px}
+    .module{border-left:4px solid var(--accent);padding:12px 14px;border-radius:8px;background:linear-gradient(180deg,rgba(15,110,253,0.02),transparent)}
+    .module h3{margin:0;font-size:16px}
+    .module small{color:var(--muted)}
+    .accordion{margin-top:12px}
+    details{background:#fff;border-radius:8px;padding:12px;margin-bottom:10px}
+    summary{cursor:pointer;font-weight:600}
+    ul{margin:8px 0 12px 18px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .code{background:#0b1220;color:#e6f0ff;padding:10px;border-radius:8px;font-family:monospace;font-size:13px}
+    @media(max-width:980px){.grid{grid-template-columns:1fr} .two-col{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">R</div>
+      <div>
+        <h1>Protocolo de Entrenamiento: Vendedores – Salesforce</h1>
+        <p class="lead">Programa de 5 días dirigido a vendedores de Transportes Rino, Tremex, VGP, CIE Agencia Aduanal y ACON Internacional. Incluye actividades de cold calling, registro CRM, generación de cotizaciones y evaluación.</p>
+      </div>
+    </header>
+
+    <div class="grid" style="margin-top:18px">
+      <main class="card">
+        <div class="section-title">
+          <div>
+            <div class="kpi"><div class="num">Duración:</div><div style="color:var(--muted);margin-left:8px">5 días • 2–3 hrs/día (opción jornada completa disponible)</div></div>
+            <div style="margin-top:6px;color:var(--muted)">Formato: formación práctica con role-play, ejercicios en Salesforce y evaluación final.</div>
+          </div>
+          <div>
+            <span class="pill">Operación: Cold Calls + CRM</span>
+            <span class="pill">Objetivo: conseguir email / cita / cierre</span>
+          </div>
+        </div>
+
+        <section>
+          <h2 style="font-size:18px;margin-bottom:6px">Resumen ejecutivo</h2>
+          <p class="lead" style="margin-bottom:12px">Este protocolo propone un plan de entrenamiento vivencial que capacita a los vendedores para: hacer llamadas en frío desde línea fija, captar correo del responsable, generar leads en Salesforce, convertir oportunidades, producir cotizaciones PDF por unidad de negocio y coordinar visitas de cierre por el representante de campo (Mario).</p>
+        </section>
+
+        <section style="margin-top:8px">
+          <div class="section-title"><h2 style="font-size:16px">Programa día a día</h2><a class="btn" href="#modules">Ver detalle</a></div>
+
+          <div class="modules" id="modules">
+            <div class="module">
+              <h3>Día 1 — Introducción & Navegación</h3>
+              <small>Objetivo: familiarización con Salesforce y el flujo de llamadas → CRM → cita</small>
+              <ul>
+                <li>Duración: 2.5 hrs — demo + práctica</li>
+                <li>Actividad clave: role-play inicial para solicitar correo</li>
+                <li>Entrega: checklist de navegación y guía rápida imprimible</li>
+              </ul>
+            </div>
+
+            <div class="module">
+              <h3>Día 2 — Gestión de Leads y Registro de Llamadas</h3>
+              <small>Objetivo: capturar datos mínimos y convertir leads</small>
+              <ul>
+                <li>Role plays: objeciones para obtener correo</li>
+                <li>Registro obligatorio en CRM: teléfono, correo (mínimo), nota breve</li>
+                <li>Actividad: cada trainee registra 3 leads reales o ficticios</li>
+              </ul>
+            </div>
+
+            <div class="module">
+              <h3>Día 3 — Oportunidades</h3>
+              <small>Objetivo: gestionar oportunidades según resultado de llamada</small>
+              <ul>
+                <li>Ejercicio: avanzar oportunidades por etapas y asignar a Mario</li>
+                <li>Dinámicas de objeciones y manejo de seguimiento</li>
+              </ul>
+            </div>
+
+            <div class="module">
+              <h3>Día 4 — Cotizaciones por Unidad</h3>
+              <small>Objetivo: generar cotizaciones PDF para Rino, Tremex, VGP, CIE y ACON</small>
+              <ul>
+                <li>Actividad: generación de 2 cotizaciones por trainee</li>
+                <li>Comparativa: cómo varía la propuesta según cada unidad</li>
+              </ul>
+            </div>
+
+            <div class="module">
+              <h3>Día 5 — Reportes & Evaluación</h3>
+              <small>Objetivo: medir desempeño y certificar operativa CRM</small>
+              <ul>
+                <li>Creación de reportes personales</li>
+                <li>Evaluación teórica + práctica (criterio 80% / 100% registro)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2 style="font-size:16px">Dinámicas y actividades recomendadas</h2>
+          <div class="two-col" style="margin-top:8px">
+            <div class="card" style="padding:12px">
+              <h4 style="margin:0 0 8px">Role-plays (diarios)</h4>
+              <ul>
+                <li>Escenario 1: cliente reacio — objetivo: conseguir correo</li>
+                <li>Escenario 2: cliente abierto — objetivo: agendar cita para visita de Mario</li>
+                <li>Escenario 3: cliente que pide cotización por email — objetivo: enviar PDF y registrar seguimiento</li>
+              </ul>
+            </div>
+            <div class="card" style="padding:12px">
+              <h4 style="margin:0 0 8px">Actividades de práctica</h4>
+              <ul>
+                <li>Simulaciones de 6 llamadas por trainee por sesión</li>
+                <li>Registro de mínimo 3 leads diarios con correo</li>
+                <li>Generar y revisar 2 cotizaciones por persona durante el training</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2 style="font-size:16px">Guión estratégico de cold call y tácticas de captura de correo</h2>
+
+          <p class="lead" style="margin-bottom:8px">Guión probado para llamadas en frío dirigido a tomadores de decisión en empresas de transporte y logística. Incluye variaciones para solicitar correo electrónico, agendar cita y manejar objeciones inmediatas.</p>
+
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <h4 style="margin:0 0 8px">Guión principal (60–90 segundos)</h4>
+            <div class="code">
+              Hola, buen día. Habla [TU NOMBRE] de <strong>[Transportes Rino / Tremex / VGP / CIE / ACON]</strong>.
+              ¿Hablo con la persona encargada de logística / importaciones / transporte?
+
+
+              Breve valor (20s): Llamamos porque ayudamos a empresas como la suya a reducir tiempos y costos en transporte/aduana cuando contratan más de un servicio con nosotros; además compartimos alertas relevantes sobre NOMS y cambios regulatorios que pueden impactar sus operaciones. 
+
+
+              Pregunta clave (10s): ¿Con quién podría coordinar para enviarle una breve propuesta por correo —o, mejor aún, agendar una visita rápida de nuestro ejecutivo Mario para revisar opciones en 15–20 minutos?
+
+
+              Cierre para correo (10s): Perfecto, ¿me puedes dar el correo del responsable para enviar la información y un par de opciones de fecha para la visita?
+
+
+              Nota: si muestra resistencia, ofrecer envío de <em>valor</em> (guía breve sobre NOMS o checklist para importaciones) y pedir solo el correo.
+            </div>
+          </div>
+
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <h4 style="margin:0 0 8px">Variantes rápidas</h4>
+            <ul>
+              <li><strong>Si hay gatekeeper:</strong> "¿Con quién puedo coordinar el envío de información técnica sobre costos y tiempos? Solo necesito el correo del responsable."</li>
+              <li><strong>Si pide precio de inmediato:</strong> "Con gusto puedo anticipar rangos, pero para dar una propuesta precisa prefiero enviarle una cotización por correo —¿cuál es el correo de la persona indicada?"</li>
+              <li><strong>Si no tiene tiempo:</strong> "Le envío un correo con un resumen de 3 puntos y una sola propuesta de fecha para visita. ¿Cuál es el mejor correo?"</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <h4 style="margin:0 0 8px">Manejo de objeciones (respuestas cortas)</h4>
+            <ul>
+              <li><strong>"Ya trabajamos con alguien":</strong> "Perfecto, ¿podría enviarles información para comparar rápidamente? Solo necesito el correo; si no es de su interés, no molestamos más."</li>
+              <li><strong>"Envíenos todo por correo":</strong> "Claro, ¿me confirmas correo y a quién va dirigido para personalizarlo?"</li>
+              <li><strong>"No me interesa ahora":</strong> "Entiendo; ¿puedo enviarle un resumen con novedades regulatorias que suelen interesar a empresas como la suya?"</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <h4 style="margin:0 0 8px">Tácticas para capturar correo</h4>
+            <ul>
+              <li>Ofrecer <em>valor</em> inmediato (guía NOMs, checklist de importación) a cambio del correo.</li>
+              <li>Pedir el correo del responsable, no del buzón genérico; validar nombre y cargo.</li>
+              <li>Confirmar ortografía del correo y dejar nota en CRM con precisión (ej: correo: juan.perez@empresa.com — confirmado al final de la llamada).</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <h4 style="margin:0 0 8px">Plantilla de seguimiento (email) — envío tras la llamada</h4>
+            <div class="code">
+              Asunto: Información y propuesta breve – [Empresa del Prospecto]
+
+
+              Hola [Nombre],
+
+
+              Gracias por atender mi llamada. Adjunto un resumen con opciones que pueden reducir costos/tiempos en sus importaciones y logística. También proponemos una visita de 20 minutos de nuestro ejecutivo Mario para revisar en detalle.
+
+
+              ¿Qué día le viene mejor?
+
+
+              Saludos,
+
+              [Tu nombre] — [Transportes Rino]
+            </div>
+          </div>
+
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <h4 style="margin:0 0 8px">Voicemail breve (si no contestan)</h4>
+            <div class="code">
+              Hola, habla [Tu nombre] de [Empresa]. Tengo una propuesta breve que puede optimizar sus costos de logística —si le parece, le envío un correo con un resumen. ¿Cuál es el mejor correo? Mi número: [tel]. Gracias.
+            </div>
+          </div>
+
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <h4 style="margin:0 0 8px">KPIs y objetivos sugeridos</h4>
+            <ul>
+              <li><strong>Llamadas por día:</strong> 60–120 dials (dependiendo de calidad del listado / complejidad de la venta). citeturn0search18</li>
+              <li><strong>Connect rate (decisor):</strong> objetivo 5–12% (medir y optimizar). citeturn0search9turn0search0</li>
+              <li><strong>Correos capturados / día:</strong> mínimo 3 por vendedor (meta operativa inicial).</li>
+              <li><strong>Conversion a cita:</strong> meta 3–8% de los contactos con correo.</li>
+              <li><strong>Medición extra:</strong> tiempo medio de llamada, tasa de seguimiento y tasa de apertura/CTR de emails enviados. citeturn0search4turn0search2</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <h4 style="margin:0 0 8px">Cumplimiento legal (breve)</h4>
+            <p style="margin:0">En México la nueva Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) exige reglas para el tratamiento de datos personales y marketing por correo; asegúrate de registrar el consentimiento y ofrecer opt-out en todas las comunicaciones por email. Consultar asesoría legal para la política de privacidad y avisos de tratamiento. citeturn0search1turn0search10</p>
+          </div>
+
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <h4 style="margin:0 0 8px">Rúbrica de evaluación de llamadas (trainer)</h4>
+            <ul>
+              <li>Presentación y tono (0–5)</li>
+              <li>Clarity of value proposition (0–5)</li>
+              <li>Obtención de correo (0–10)</li>
+              <li>Cierre para cita (0–10)</li>
+              <li>Registro correcto en Salesforce (campos mínimos + nota) (0–10)</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <section style="margin-top:14px">
+          <h2 style="font-size:16px">Evaluación final (criterios)</h2>
+          <ul>
+            <li>Teoría: 10 preguntas (80% mínimo)</li>
+            <li>Práctico: Lead convertido + oportunidad + cotización PDF + reporte (registro completo obligatorio)</li>
+            <li>Calificación de role-play por pares: claridad, cierre para correo/cita, registro en CRM</li>
+          </ul>
+        </section>
+
+        <section style="margin-top:14px">
+          <h2 style="font-size:16px">Materiales que debe preparar el trainer</h2>
+          <ul>
+            <li>Listado de 50 empresas objetivo para llamadas (segmentadas por industria)</li>
+            <li>Casos ficticios con datos para prácticas</li>
+            <li>Plantilla PDF de cotización para cada unidad (placeholder en Salesforce)</li>
+            <li>Checklist de evaluación y rúbrica</li>
+          </ul>
+        </section>
+
+        <footer>
+          <p>Propuesta preparada para presentar a la dirección. Disponible para generar versión PDF o versión interactiva React/Tailwind si lo requieren.</p>
+        </footer>
+      </main>
+
+      <aside>
+        <div class="card" style="margin-bottom:12px">
+          <h3 style="margin-top:0">Puntos clave para directivos</h3>
+          <ul>
+            <li>Alineamiento comercial: objetivo claro (email → cita → venta).</li>
+            <li>Medición: reportes diarios de correos obtenidos y citas agendadas.</li>
+            <li>Certificación: aprobación obligatoria para salir a campo.</li>
+          </ul>
+          <div style="margin-top:10px"><a class="btn" href="#" onclick="window.print();return false">Imprimir / Exportar PDF</a></div>
+        </div>
+
+        <div class="card" style="margin-bottom:12px">
+          <h4 style="margin:0 0 8px">Cronograma resumido</h4>
+          <div><strong>Día 1:</strong> Intro + role-plays</div>
+          <div><strong>Día 2:</strong> Leads y llamadas</div>
+          <div><strong>Día 3:</strong> Oportunidades</div>
+          <div><strong>Día 4:</strong> Cotizaciones</div>
+          <div><strong>Día 5:</strong> Reportes + evaluación</div>
+        </div>
+
+        <div class="card">
+          <h4 style="margin:0 0 8px">Contacto</h4>
+          <p class="lead">Preparado por: Equipo Comercial • Grupo Rino</p>
+          <p style="margin:0;color:var(--muted)">¿Necesitas ajustes al plan o exportarlo a PDF/React? Indícanos y lo generamos.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
