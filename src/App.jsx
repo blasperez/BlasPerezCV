@@ -1,6 +1,6 @@
 import React from "react";
-import BlasPerezCV from "./BlasPerezCV";
+import TrainingProtocolPresentation from "../protocolo";
 
 export default function App() {
-  return <BlasPerezCV />;
+  return <TrainingProtocolPresentation />;
 }
