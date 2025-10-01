@@ -1,5 +1,5 @@
 import React from "react";
-import BlasPerezCV from "../Index";
+import BlasPerezCV from "./BlasPerezCV";
 
 export default function App() {
   return <BlasPerezCV />;
