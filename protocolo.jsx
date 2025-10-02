@@ -121,11 +121,19 @@ export default function TrainingProtocolPresentation() {
             transition={{ type: "spring", stiffness: 150, damping: 18 }}
           >
             <motion.div
-              className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl bg-blue-600 text-lg font-bold text-white sm:h-16 sm:w-16 sm:text-xl"
-              animate={{ rotate: [0, 2, -2, 0] }}
-              transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
+              className="relative w-16 aspect-square overflow-hidden rounded-xl border border-white/60 bg-white/10 shadow-lg backdrop-blur sm:w-16"
+              whileHover={{ scale: 1.02 }}
             >
-              <img src={imageMark} alt="Marca" className="h-full w-full object-cover" />
+              <motion.img
+                src={imageMark}
+                alt="Marca"
+                className="h-full w-full select-none object-cover"
+                drag
+                dragConstraints={{ left: -4, right: 4, top: -4, bottom: 4 }}
+                dragElastic={0.12}
+                dragMomentum={false}
+                whileTap={{ scale: 0.99 }}
+              />
             </motion.div>
             <div className="min-w-0">
               <h1 className="text-xl font-semibold leading-snug sm:text-2xl">
