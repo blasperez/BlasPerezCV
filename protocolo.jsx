@@ -235,15 +235,35 @@ ${coldCallScript.keyQuestion}`}
                 <ul className="mt-3 space-y-2 text-xs text-slate-600">
                   <li className="flex items-center gap-2">
                     <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    50 empresas objetivo (listado CSV)
+                    Lista objetivo segmentada (CSV/Sheet) con 150–300 empresas: giro, tamaño, teléfono directo, ubicación, DNC.
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Casos ficticios y scripts
+                    Scripts de llamada por escenario (apertura, gatekeeper, decisor) y guiones de voicemail.
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Rúbrica de evaluación y checklist
+                    Guía de objeciones y cierres rápidos específicos de transporte (2–3 cierres estándar).
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
+                    Códigos de disposición y definiciones (connect, buzón, ocupado, interesado, cita, no interés).
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
+                    Checklist de campos mínimos en CRM por llamada (empresa, contacto, teléfono, resultado, próxima acción).
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
+                    Plantilla de agenda para bloques de llamadas (timeboxing) con descanso de 15 min a la mitad.
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
+                    Mapa de unidades de negocio y ofertas (Rino, Tremex, VGP, CIE, ACON) para el pitch.
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
+                    Rúbrica de evaluación y checklist de certificación del vendedor.
                   </li>
                 </ul>
               </div>
