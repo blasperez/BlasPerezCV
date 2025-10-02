@@ -230,42 +230,81 @@ ${coldCallScript.keyQuestion}`}
 
               <div>
                 <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                  Materiales del trainer
+                  Horario del día (9:00–12:00)
                 </h4>
-                <ul className="mt-3 space-y-2 text-xs text-slate-600">
-                  <li className="flex items-center gap-2">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Lista objetivo segmentada (CSV/Sheet) con 150–300 empresas: giro, tamaño, teléfono directo, ubicación, DNC.
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Scripts de llamada por escenario (apertura, gatekeeper, decisor) y guiones de voicemail.
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Guía de objeciones y cierres rápidos específicos de transporte (2–3 cierres estándar).
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Códigos de disposición y definiciones (connect, buzón, ocupado, interesado, cita, no interés).
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Checklist de campos mínimos en CRM por llamada (empresa, contacto, teléfono, resultado, próxima acción).
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Plantilla de agenda para bloques de llamadas (timeboxing) con descanso de 15 min a la mitad.
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Mapa de unidades de negocio y ofertas (Rino, Tremex, VGP, CIE, ACON) para el pitch.
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="inline-flex h-2 w-2 rounded-full bg-blue-500" />
-                    Rúbrica de evaluación y checklist de certificación del vendedor.
-                  </li>
-                </ul>
+                <div className="mt-3 grid gap-3">
+                  <div className="p-3 rounded-lg border bg-white/90 shadow-sm">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-xs text-slate-500">09:00–09:15</div>
+                        <div className="text-sm font-medium">Conexión</div>
+                        <div className="text-xs text-slate-500">Objetivos del día, setup de llamadas</div>
+                      </div>
+                      <div className="h-6 w-1.5 rounded bg-blue-500/70"></div>
+                    </div>
+                  </div>
+                  <div className="p-3 rounded-lg border bg-white/90 shadow-sm">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-xs text-slate-500">09:15–10:00</div>
+                        <div className="text-sm font-medium">Teoría</div>
+                        <div className="text-xs text-slate-500">Playbook de valor y registro mínimo en CRM</div>
+                      </div>
+                      <div className="h-6 w-1.5 rounded bg-indigo-500/70"></div>
+                    </div>
+                  </div>
+                  <div className="p-3 rounded-lg border bg-white/90 shadow-sm">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-xs text-slate-500">10:00–10:30</div>
+                        <div className="text-sm font-medium">Práctica guiada</div>
+                        <div className="text-xs text-slate-500">Role‑play (apertura, gatekeeper, decisor)</div>
+                      </div>
+                      <div className="h-6 w-1.5 rounded bg-sky-500/70"></div>
+                    </div>
+                  </div>
+                  <div className="p-3 rounded-lg border bg-yellow-50 shadow-sm">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-xs text-slate-500">10:30–10:45</div>
+                        <div className="text-sm font-medium">Break (15 min)</div>
+                        <div className="text-xs text-slate-500">Descanso e hidratación</div>
+                      </div>
+                      <div className="h-6 w-1.5 rounded bg-amber-400/80"></div>
+                    </div>
+                  </div>
+                  <div className="p-3 rounded-lg border bg-white/90 shadow-sm">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-xs text-slate-500">10:45–11:30</div>
+                        <div className="text-sm font-medium">Práctica intensiva</div>
+                        <div className="text-xs text-slate-500">Llamadas simuladas enfocadas a VENTAS (sin tareas administrativas)</div>
+                      </div>
+                      <div className="h-6 w-1.5 rounded bg-emerald-500/70"></div>
+                    </div>
+                  </div>
+                  <div className="p-3 rounded-lg border bg-white/90 shadow-sm">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-xs text-slate-500">11:30–11:50</div>
+                        <div className="text-sm font-medium">Desconexión y retro</div>
+                        <div className="text-xs text-slate-500">Feedback y lecciones clave</div>
+                      </div>
+                      <div className="h-6 w-1.5 rounded bg-slate-400/70"></div>
+                    </div>
+                  </div>
+                  <div className="p-3 rounded-lg border bg-white/90 shadow-sm">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <div className="text-xs text-slate-500">11:50–12:00</div>
+                        <div className="text-sm font-medium">Prueba y cierre</div>
+                        <div className="text-xs text-slate-500">Prueba práctica corta y checklist de certificación</div>
+                      </div>
+                      <div className="h-6 w-1.5 rounded bg-fuchsia-500/70"></div>
+                    </div>
+                  </div>
+                  <p className="text-[11px] text-slate-500">Alcance: vendedores solo venden (llamadas y registro mínimo en CRM). Sin tareas administrativas ni campañas.</p>
+                </div>
               </div>
 
               <div>
