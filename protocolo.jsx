@@ -286,7 +286,7 @@ ${coldCallScript.keyQuestion}`}
                       <div>
                         <div className="text-xs text-slate-500">10:45–11:30</div>
                         <div className="text-sm font-medium">Práctica intensiva</div>
-                        <div className="text-xs text-slate-500">Llamadas simuladas enfocadas a VENTAS (sin tareas administrativas)</div>
+                        <div className="text-xs text-slate-500">Llamadas simuladas enfocadas a VENTAS.</div>
                       </div>
                       <div className="h-6 w-1.5 rounded bg-emerald-500/70"></div>
                     </div>
@@ -311,7 +311,7 @@ ${coldCallScript.keyQuestion}`}
                       <div className="h-6 w-1.5 rounded bg-fuchsia-500/70"></div>
                     </div>
                   </div>
-                  <p className="text-[11px] text-slate-500">Alcance: vendedores solo venden (llamadas y registro mínimo en CRM). Sin tareas administrativas ni campañas.</p>
+                  <p className="text-[11px] text-slate-500">Alcance: vendedores solo venden (llamadas y registro mínimo en CRM).</p>
                 </div>
               </div>
 
