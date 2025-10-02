@@ -66,33 +66,57 @@ export default function TrainingProtocolPresentation() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 p-8 text-slate-800">
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 p-4 sm:p-6 lg:p-8 text-slate-800">
       <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-        <header className="flex items-center justify-between p-8 border-b">
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-xl flex items-center justify-center bg-blue-600 text-white font-bold text-xl">R</div>
-            <div>
-              <h1 className="text-2xl font-semibold">Protocolo de Entrenamiento — Vendedores</h1>
-              <p className="text-sm text-slate-500 mt-1">Salesforce + Cold Calls • Presentación ejecutiva</p>
+        <header className="flex flex-col gap-6 p-6 sm:p-8 border-b md:flex-row md:items-center md:justify-between">
+          <div className="flex items-center gap-4 flex-1 min-w-0">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl flex items-center justify-center bg-blue-600 text-white font-bold text-lg sm:text-xl">
+              R
+            </div>
+            <div className="min-w-0">
+              <h1 className="text-xl sm:text-2xl font-semibold leading-snug">
+                Protocolo de Entrenamiento — Vendedores
+              </h1>
+              <p className="text-sm text-slate-500 mt-1">
+                Salesforce + Cold Calls • Presentación ejecutiva
+              </p>
             </div>
           </div>
-          <div className="flex items-center gap-3">
-            <button onClick={() => window.print()} className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold shadow">Imprimir / Exportar</button>
-            <a href="#modules" className="text-sm text-slate-500 hover:text-slate-700">Ir a módulos</a>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+            <button
+              onClick={() => window.print()}
+              className="inline-flex justify-center items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold shadow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              Imprimir / Exportar
+            </button>
+            <a
+              href="#modules"
+              className="text-sm text-blue-600 sm:text-slate-500 hover:text-blue-700 sm:hover:text-slate-700 text-center"
+            >
+              Ir a módulos
+            </a>
           </div>
         </header>
 
-        <main className="p-8">
-          <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-            <div className="grid md:grid-cols-3 gap-6">
+        <main className="p-6 sm:p-8">
+          <motion.section
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="grid gap-6 md:grid-cols-3">
               <div className="md:col-span-2">
                 <h2 className="text-lg font-semibold">Resumen ejecutivo</h2>
-                <p className="text-sm text-slate-600 mt-2">Programa de 5 días diseñado para capacitar al equipo de ventas en técnicas outbound (cold calls desde línea fija), captura de correos y registro riguroso en Salesforce para convertir oportunidades y coordinar visitas del ejecutivo de campo.</p>
+                <p className="text-sm text-slate-600 mt-2 leading-relaxed">
+                  Programa de 5 días diseñado para capacitar al equipo de ventas en técnicas outbound (cold calls desde línea fija), captura de correos y registro riguroso en Salesforce para convertir oportunidades y coordinar visitas del ejecutivo de campo.
+                </p>
 
-                <div className="mt-4 grid md:grid-cols-2 gap-4">
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
                   <div className="p-4 rounded-lg border">
                     <h3 className="text-sm font-semibold">Objetivo operativo</h3>
-                    <p className="text-xs text-slate-500 mt-2">Captar correo del responsable, agendar citas para ventas en campo y cuando sea posible cerrar servicios directamente.</p>
+                    <p className="text-xs text-slate-500 mt-2">
+                      Captar correo del responsable, agendar citas para ventas en campo y cuando sea posible cerrar servicios directamente.
+                    </p>
                   </div>
                   <div className="p-4 rounded-lg border">
                     <h3 className="text-sm font-semibold">KPIs sugeridos</h3>
@@ -107,16 +131,26 @@ export default function TrainingProtocolPresentation() {
 
                 <div className="mt-6">
                   <h3 className="text-md font-semibold">Guión estratégico (extracto)</h3>
-                  <p className="text-sm text-slate-600 mt-2">Introduce el pitch de valor en 20 segundos, pide el correo como objetivo mínimo y ofrece la visita de Mario como objetivo ideal. Registrar consentimiento para marketing en la nota del CRM.</p>
-                  <div className="mt-3 p-4 bg-slate-50 rounded-md border">
-                    <pre className="text-xs">{coldCallScript.intro}\n\n{coldCallScript.value}\n\n{coldCallScript.keyQuestion}</pre>
+                  <p className="text-sm text-slate-600 mt-2 leading-relaxed">
+                    Introduce el pitch de valor en 20 segundos, pide el correo como objetivo mínimo y ofrece la visita de Mario como objetivo ideal. Registrar consentimiento para marketing en la nota del CRM.
+                  </p>
+                  <div className="mt-3 p-4 bg-slate-50 rounded-md border overflow-hidden">
+                    <pre className="text-xs whitespace-pre-wrap break-words text-slate-700">
+                      {coldCallScript.intro}
+
+                      {coldCallScript.value}
+
+                      {coldCallScript.keyQuestion}
+                    </pre>
                   </div>
                 </div>
               </div>
 
-              <aside className="p-4 rounded-lg border">
+              <aside className="p-4 rounded-lg border bg-white/60 backdrop-blur-sm">
                 <h3 className="text-sm font-semibold">Prioridad del proyecto</h3>
-                <p className="text-xs text-slate-500 mt-2">Proyecto con inversión y expectativa de excelencia. Entregar capacitación medible, replicable y certificable.</p>
+                <p className="text-xs text-slate-500 mt-2">
+                  Proyecto con inversión y expectativa de excelencia. Entregar capacitación medible, replicable y certificable.
+                </p>
 
                 <div className="mt-4">
                   <h4 className="text-xs font-semibold">Materiales del trainer</h4>
@@ -129,53 +163,86 @@ export default function TrainingProtocolPresentation() {
 
                 <div className="mt-6">
                   <h4 className="text-xs font-semibold">Cumplimiento</h4>
-                  <p className="text-xs text-slate-500 mt-2">Registrar consentimiento y ofrecer opt-out. Consultar asesoría legal para avisos de privacidad y campañas de email.</p>
+                  <p className="text-xs text-slate-500 mt-2">
+                    Registrar consentimiento y ofrecer opt-out. Consultar asesoría legal para avisos de privacidad y campañas de email.
+                  </p>
                 </div>
               </aside>
             </div>
           </motion.section>
 
-          <motion.section id="modules" className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>
-            <h2 className="text-lg font-semibold mb-4">Programa día a día (detallado)</h2>
+          <motion.section
+            id="modules"
+            className="mt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+          >
+            <h2 className="text-lg font-semibold mb-4">
+              Programa día a día (detallado)
+            </h2>
 
             <div className="space-y-4">
               {modules.map((m, i) => (
-                <motion.article key={m.title} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }} className="p-4 border rounded-lg">
-                  <div className="flex items-start justify-between">
+                <motion.article
+                  key={m.title}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                  className="p-4 border rounded-lg bg-white"
+                >
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <h3 className="font-semibold">{m.title}</h3>
                       <p className="text-xs text-slate-500">{m.subtitle}</p>
                     </div>
-                    <div className="text-sm text-slate-400">Duración estimada: 2–3 hrs</div>
+                    <div className="text-xs sm:text-sm text-slate-400">
+                      Duración estimada: 2–3 hrs
+                    </div>
                   </div>
-                  <ul className="mt-3 text-sm text-slate-600 space-y-1 list-disc list-inside">
-                    {m.bullets.map(b => <li key={b}>{b}</li>)}
+                  <ul className="mt-3 text-sm text-slate-600 space-y-1 list-disc list-inside leading-relaxed">
+                    {m.bullets.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
                   </ul>
                 </motion.article>
               ))}
             </div>
           </motion.section>
 
-          <motion.section className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+          <motion.section
+            className="mt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
             <h2 className="text-lg font-semibold">Guión completo y tácticas</h2>
-            <div className="mt-3 grid md:grid-cols-2 gap-4">
+            <div className="mt-3 grid gap-4 md:grid-cols-2">
               <div className="p-4 border rounded-lg bg-slate-50">
                 <h4 className="font-semibold">Pitch y preguntas clave</h4>
-                <p className="text-sm text-slate-600 mt-2">{coldCallScript.value}</p>
+                <p className="text-sm text-slate-600 mt-2">
+                  {coldCallScript.value}
+                </p>
                 <div className="mt-3">
                   <h5 className="text-sm font-semibold">Pregunta clave</h5>
-                  <p className="text-sm text-slate-600">{coldCallScript.keyQuestion}</p>
+                  <p className="text-sm text-slate-600">
+                    {coldCallScript.keyQuestion}
+                  </p>
                 </div>
               </div>
 
               <div className="p-4 border rounded-lg">
                 <h4 className="font-semibold">Tácticas</h4>
                 <ul className="text-sm text-slate-600 mt-2 list-disc list-inside">
-                  {coldCallScript.tactics.map(t => <li key={t}>{t}</li>)}
+                  {coldCallScript.tactics.map((t) => (
+                    <li key={t}>{t}</li>
+                  ))}
                 </ul>
                 <div className="mt-3">
                   <h5 className="text-sm font-semibold">Voicemail</h5>
-                  <pre className="text-xs mt-2 bg-slate-50 p-2 rounded">{coldCallScript.voicemail}</pre>
+                  <pre className="text-xs mt-2 bg-slate-50 p-2 rounded whitespace-pre-wrap break-words text-slate-700">
+                    {coldCallScript.voicemail}
+                  </pre>
                 </div>
               </div>
             </div>
@@ -192,26 +259,39 @@ export default function TrainingProtocolPresentation() {
             </div>
           </motion.section>
 
-          <motion.section className="mt-8 mb-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>
+          <motion.section
+            className="mt-8 mb-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+          >
             <h2 className="text-lg font-semibold">Siguientes pasos sugeridos</h2>
-            <div className="mt-3 grid md:grid-cols-3 gap-4">
-              <div className="p-4 border rounded-lg">
+            <div className="mt-3 grid gap-4 md:grid-cols-3">
+              <div className="p-4 border rounded-lg bg-white">
                 <h4 className="font-semibold">1. Listado objetivo</h4>
-                <p className="text-sm text-slate-600 mt-2">Importar 50 empresas priorizadas como dataset inicial y asignar por vendedor.</p>
+                <p className="text-sm text-slate-600 mt-2">
+                  Importar 50 empresas priorizadas como dataset inicial y asignar por vendedor.
+                </p>
               </div>
-              <div className="p-4 border rounded-lg">
+              <div className="p-4 border rounded-lg bg-white">
                 <h4 className="font-semibold">2. Entrenamiento de campo</h4>
-                <p className="text-sm text-slate-600 mt-2">Sesiones de role-play diarias y práctica supervisada en CRM.</p>
+                <p className="text-sm text-slate-600 mt-2">
+                  Sesiones de role-play diarias y práctica supervisada en CRM.
+                </p>
               </div>
-              <div className="p-4 border rounded-lg">
+              <div className="p-4 border rounded-lg bg-white">
                 <h4 className="font-semibold">3. Medición</h4>
-                <p className="text-sm text-slate-600 mt-2">Definir panel de KPIs y frecuencia de reportes (diario / semanal).</p>
+                <p className="text-sm text-slate-600 mt-2">
+                  Definir panel de KPIs y frecuencia de reportes (diario / semanal).
+                </p>
               </div>
             </div>
           </motion.section>
         </main>
 
-        <footer className="p-6 border-t text-sm text-slate-500">Preparado por: Equipo Comercial • Grupo Rino — Versión para presentación</footer>
+        <footer className="p-6 border-t text-sm text-slate-500 text-center sm:text-left">
+          Preparado por: Equipo Comercial • Grupo Rino — Versión para presentación
+        </footer>
       </div>
     </div>
   );
