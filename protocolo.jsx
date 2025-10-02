@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import imageMark from "./favicon.jpg";
 
 export default function TrainingProtocolPresentation() {
   const modules = [
@@ -120,11 +121,11 @@ export default function TrainingProtocolPresentation() {
             transition={{ type: "spring", stiffness: 150, damping: 18 }}
           >
             <motion.div
-              className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-600 text-lg font-bold text-white sm:h-16 sm:w-16 sm:text-xl"
+              className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl bg-blue-600 text-lg font-bold text-white sm:h-16 sm:w-16 sm:text-xl"
               animate={{ rotate: [0, 2, -2, 0] }}
               transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
             >
-              R
+              <img src={imageMark} alt="Marca" className="h-full w-full object-cover" />
             </motion.div>
             <div className="min-w-0">
               <h1 className="text-xl font-semibold leading-snug sm:text-2xl">
