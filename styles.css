@@ -176,7 +176,7 @@ body.cursor-hidden .cursor-ring { opacity: 0; }
 }
 
 .nav-wordmark {
-  font-size: 10.5px;
+  font-size: 16px;
   line-height: 1;
   white-space: nowrap;
 }
