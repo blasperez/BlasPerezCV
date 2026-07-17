@@ -5,9 +5,9 @@
    ============================================================ */
 
 :root {
-  --ink: #2A3138;
-  --ink-2: #303840;
-  --ink-3: #39424B;
+  --ink: #1C2024;
+  --ink-2: #22262B;
+  --ink-3: #292E33;
   --paper: #FBFAF7;
   --card: #FFFFFF;
   --text: #232A31;
@@ -157,7 +157,7 @@ body.cursor-hidden .cursor-ring { opacity: 0; }
 }
 
 .nav.scrolled {
-  background: rgba(42, 49, 56, 0.9);
+  background: rgba(28, 32, 36, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line-inverse);
@@ -757,6 +757,27 @@ body.cursor-hidden .cursor-ring { opacity: 0; }
   color: var(--muted-inverse);
   text-align: center;
 }
+
+/* ---------- Torch light on dark walls ---------- */
+
+.hero, .section-dark { position: relative; overflow: hidden; }
+
+.torch {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  background:
+    radial-gradient(480px 380px at calc(var(--mx, 50%) + var(--j1x, 0px)) calc(var(--my, 40%) + var(--j1y, 0px)), rgba(236, 219, 178, 0.085), transparent 70%),
+    radial-gradient(680px 560px at calc(var(--mx, 50%) - 70px) calc(var(--my, 40%) + 50px), rgba(220, 200, 160, 0.045), transparent 75%),
+    radial-gradient(320px 420px at calc(var(--mx, 50%) + var(--j2x, 0px)) calc(var(--my, 40%) + var(--j2y, 0px)), rgba(245, 230, 190, 0.06), transparent 65%);
+}
+
+.torch.on { opacity: 1; }
+
+.hero-inner, .section-dark .container { position: relative; z-index: 1; }
 
 /* ---------- Scroll reveals ---------- */
 

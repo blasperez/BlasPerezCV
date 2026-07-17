@@ -48,6 +48,60 @@
     }
   }
 
+  /* ---------- Torch light on dark sections ---------- */
+
+  if (finePointer && !reducedMotion) {
+    var torchSections = document.querySelectorAll(".hero, .section-dark");
+    var torches = [];
+
+    torchSections.forEach(function (sec) {
+      var t = document.createElement("div");
+      t.className = "torch";
+      t.setAttribute("aria-hidden", "true");
+      sec.insertBefore(t, sec.firstChild);
+
+      var state = { el: t, x: 0, y: 0, tx: 0, ty: 0, active: false };
+      torches.push(state);
+
+      sec.addEventListener("mouseenter", function (e) {
+        var r = sec.getBoundingClientRect();
+        state.tx = state.x = e.clientX - r.left;
+        state.ty = state.y = e.clientY - r.top;
+        state.active = true;
+        t.classList.add("on");
+      });
+
+      sec.addEventListener("mousemove", function (e) {
+        var r = sec.getBoundingClientRect();
+        state.tx = e.clientX - r.left;
+        state.ty = e.clientY - r.top;
+      });
+
+      sec.addEventListener("mouseleave", function () {
+        state.active = false;
+        t.classList.remove("on");
+      });
+    });
+
+    if (torches.length) {
+      (function torchLoop() {
+        var now = performance.now() / 1000;
+        torches.forEach(function (s) {
+          if (!s.active && !s.el.classList.contains("on")) return;
+          s.x += (s.tx - s.x) * 0.07;
+          s.y += (s.ty - s.y) * 0.07;
+          s.el.style.setProperty("--mx", s.x + "px");
+          s.el.style.setProperty("--my", s.y + "px");
+          s.el.style.setProperty("--j1x", Math.sin(now * 1.3) * 22 + "px");
+          s.el.style.setProperty("--j1y", Math.cos(now * 1.1) * 16 + "px");
+          s.el.style.setProperty("--j2x", Math.cos(now * 0.8 + 2) * 30 + "px");
+          s.el.style.setProperty("--j2y", Math.sin(now * 1.6 + 1) * 20 + "px");
+        });
+        requestAnimationFrame(torchLoop);
+      })();
+    }
+  }
+
   /* ---------- Scroll reveals ---------- */
 
   var reveals = document.querySelectorAll(".reveal");
