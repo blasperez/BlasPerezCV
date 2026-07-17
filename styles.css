@@ -322,6 +322,9 @@ body.cursor-hidden .cursor-ring { opacity: 0; }
 }
 
 .hero-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--muted-inverse);
@@ -330,6 +333,19 @@ body.cursor-hidden .cursor-ring { opacity: 0; }
   padding-bottom: 2px;
   transition: color 0.25s ease, border-color 0.25s ease;
 }
+
+.ic {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+
+.hero-links a .ic { color: var(--gold); }
 
 .hero-links a:hover { color: var(--gold-soft); border-color: var(--gold); }
 
@@ -695,12 +711,17 @@ body.cursor-hidden .cursor-ring { opacity: 0; }
 }
 
 .footer-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
 }
+
+.footer-label .ic { width: 14px; height: 14px; }
 
 .footer-item a {
   color: var(--text-inverse);
