@@ -176,10 +176,15 @@ body.cursor-hidden .cursor-ring { opacity: 0; }
 }
 
 .nav-wordmark {
-  font-size: 16px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   line-height: 1;
   white-space: nowrap;
 }
+
+.nav-wordmark .nav-name-gold { color: #AE8C5E; }
 
 .nav-logo {
   height: 40px;
