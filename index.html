@@ -1,13 +1,460 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mi-cv</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blas Antonio Pérez Chávez — CV</title>
+<meta name="description" content="Blas Antonio Pérez Chávez — Technical Support Specialist · Business Process Improvement & Automation. 10+ years optimizing support processes, IT projects and AI-assisted automation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230F1922'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%23B8913F' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a class="nav-name" href="#top">B<span class="nav-name-gold">PC</span></a>
+  <div class="nav-links">
+    <a href="#summary">Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="btn btn-gold btn-small" href="Blas-Perez-CV.pdf" download>Download CV</a>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="hero-route" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path class="route-path" d="M-60,700 C220,660 300,420 560,430 C820,440 860,690 1120,650 C1310,620 1400,470 1520,430" fill="none"/>
+    <circle class="route-node n1" cx="560" cy="430" r="5"/>
+    <circle class="route-node n2" cx="1120" cy="650" r="5"/>
+    <path class="route-path route-path-2" d="M-60,260 C260,300 520,140 780,180 C1040,220 1200,120 1520,170" fill="none"/>
+    <circle class="route-node n3" cx="780" cy="180" r="5"/>
+  </svg>
+  <div class="hero-inner">
+    <p class="hero-eyebrow anim-1">Curriculum Vitae · Guadalajara, Jalisco, México</p>
+    <h1 class="hero-name">
+      <span class="anim-2">Blas Antonio</span>
+      <span class="hero-name-gold anim-3">Pérez Chávez</span>
+    </h1>
+    <p class="hero-roles anim-4">Technical Support Specialist<span class="sep">·</span>Business Process Improvement &amp; Automation</p>
+    <p class="hero-degree anim-4">Bachelor's Degree in Digital Business Management</p>
+    <div class="hero-cta anim-5">
+      <a class="btn btn-gold" href="mailto:bpperez815@gmail.com">Get in touch</a>
+      <a class="btn btn-ghost" href="Blas-Perez-CV.pdf" download>Download CV (PDF)</a>
+    </div>
+    <div class="hero-links anim-5">
+      <a href="https://linkedin.com/in/bpecha" target="_blank" rel="noopener">linkedin.com/in/bpecha</a>
+      <a href="https://github.com/blasperez" target="_blank" rel="noopener">github.com/blasperez</a>
+      <a href="tel:+523333371063">33 3337 1063</a>
+    </div>
+  </div>
+  <a class="scroll-hint anim-5" href="#summary" aria-label="Scroll to summary">
+    <span>Scroll</span>
+    <span class="scroll-line"></span>
+  </a>
+</header>
+
+<main>
+
+<section class="section" id="summary">
+  <div class="container">
+    <p class="eyebrow reveal">Professional Summary</p>
+    <p class="summary-text reveal">Results-driven technical professional with 10+ years of experience optimizing customer support processes, managing IT projects, and implementing data-driven solutions. Demonstrated expertise in troubleshooting complex systems, managing field services, CRM/ERP implementation (Salesforce, Bitrix24), and building AI-assisted automation pipelines in SaaS and logistics environments. Advanced proficiency in Excel, SQL, HTML, CSS, APIs, and Power BI, complemented by strong bilingual communication skills (English C1 Advanced certified). Proven track record of enhancing customer satisfaction, streamlining workflows, and delivering technical solutions that drive business growth.</p>
+  </div>
+</section>
+
+<section class="section section-experience" id="experience">
+  <div class="container">
+    <p class="eyebrow reveal">Professional Experience</p>
+    <div class="timeline" id="timeline">
+      <div class="timeline-track" aria-hidden="true"><div class="timeline-progress" id="timeline-progress"></div></div>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>AI Automation Engineer — Pedimento Template Engine</h3>
+          <span class="job-date">05/2026 – Present</span>
+        </div>
+        <p class="job-org">Transportes Rino / Freelance · Manzanillo, Colima</p>
+        <ul>
+          <li>Designing and building a Python + LLM API pipeline that generates final pedimento (customs declaration) templates automatically — removing the most error-prone manual step in the broker workflow.</li>
+          <li>Training a custom vision/AI model to read low-legibility invoice fields (scans, photos, smudged carbon copies) and map them to the correct pedimento blocks.</li>
+          <li>v1 shipped and live in production; now iterating toward v2 with expanded field coverage and confidence scoring on every extraction.</li>
+          <li>Early results: less rework from human error, shorter processing time per document, higher throughput per analyst — and noticeably lower operator stress.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Brand &amp; Web Designer — Corporate Identity Refresh</h3>
+          <span class="job-date">05/2026</span>
+        </div>
+        <p class="job-org">CIE · Corporativo Internacional Especializado (Agencia Aduanal) / Freelance · Manzanillo</p>
+        <ul>
+          <li>Rebuilt the corporate presentation brochure as a clean, minimalist system with a color palette derived from the existing logo — same brand, sharper voice.</li>
+          <li>Reworked the content end to end so prospects and existing clients understand the service offering on first read.</li>
+          <li>Designed and shipped an animated landing page aligned with the new brochure system.</li>
+          <li>Closed the project with a formal rights transfer (carta de traspaso de derechos) handing all design assets back to the client.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>AI Data &amp; Content Quality Evaluator</h3>
+          <span class="job-date">01/2026 – Present</span>
+        </div>
+        <p class="job-org">Welo Data / Freelance · Remote</p>
+        <ul>
+          <li>Lyric Translation Reviewer: review lyric translations for semantic accuracy, cultural relevance, and adherence to platform guidelines.</li>
+          <li>Project Saiph — Podcast Content Reviewer (es-MX): classify podcast content using moderation policies, contextual analysis, and metadata validation to improve AI training datasets.</li>
+          <li>Scout Search Quality Rater (es-MX): evaluate search result relevance, intent matching, and usefulness against detailed rating guidelines.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>IT &amp; Digital Strategy Manager</h3>
+          <span class="job-date">11/2025 – 02/2026</span>
+        </div>
+        <p class="job-org">ACON Worldwide Logística · Hybrid</p>
+        <ul>
+          <li>Led the strategic acquisition and end-to-end implementation of the Bitrix24 ecosystem as the company's primary technical lead.</li>
+          <li>Built custom server-side integrations on the Bitrix24 API to automate complex logistics workflows and extend the platform.</li>
+          <li>Wrote programmatic solutions for data management, optimizing server requests and streamlining the quote-to-invoice flow.</li>
+          <li>Directed corporate identity strategy — digital assets, motion graphics, and branding materials supporting commercial expansion.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>IT Manager</h3>
+          <span class="job-date">10/2025 – 01/2026</span>
+        </div>
+        <p class="job-org">Transportes Rino · Hybrid · Manzanillo, Colima</p>
+        <ul>
+          <li>Led the end-to-end implementation of Salesforce CRM, including data migration from legacy systems to the new platform.</li>
+          <li>Coordinated every project phase: requirements gathering, planning, execution, testing, and deployment.</li>
+          <li>Defined the strategic roadmap and key decisions to align CRM adoption with business goals.</li>
+          <li>Ran daily project operations — tracked progress, documented activities, and prepared next-day action plans.</li>
+          <li>Kept technical teams and business stakeholders in sync so adoption went smoothly.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Bilingual Sales Agent</h3>
+          <span class="job-date">03/2025 – 04/2025</span>
+        </div>
+        <p class="job-org">Avantive Solutions · Guadalajara</p>
+        <ul>
+          <li>Sold services through cold calls, closing at a 75% call-to-sale rate.</li>
+          <li>Processed compensation claims with proprietary system tools, ensuring accurate reimbursements.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Bilingual Customer Service Representative</h3>
+          <span class="job-date">11/2024</span>
+        </div>
+        <p class="job-org">InTouch (Beliveo México) · Guadalajara</p>
+        <ul>
+          <li>Resolved complex customer inquiries for JCPenney with a 95% first-call resolution rate.</li>
+          <li>Processed compensation claims with proprietary system tools, ensuring accurate reimbursements.</li>
+          <li>Handled high-volume online order support, cutting average resolution time by 15%.</li>
+          <li>Applied technical knowledge to troubleshoot order discrepancies and delivery issues efficiently.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Bilingual Customer Service Agent</h3>
+          <span class="job-date">01/2024 – 04/2024</span>
+        </div>
+        <p class="job-org">XtendOps · Guadalajara</p>
+        <ul>
+          <li>Delivered premium bilingual support across North and South America for HelloFresh and EveryPlate.</li>
+          <li>Processed 50+ service inquiries a day with a 98% customer satisfaction rating.</li>
+          <li>Executed systematic compensation protocols for damaged or incomplete deliveries.</li>
+          <li>Used order management systems to identify and resolve shipping discrepancies quickly.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Project Manager (Front-End Testing)</h3>
+          <span class="job-date">01/2021 – 12/2022</span>
+        </div>
+        <p class="job-org">Bon's Cafe Restaurant · Guadalajara</p>
+        <ul>
+          <li>Led the development team building a custom e-commerce platform with hierarchical administration.</li>
+          <li>Implemented a role-based permission system for employees, managers, and owners, improving operational efficiency by 35%.</li>
+          <li>Designed a multilingual interface that lets non-technical staff manage menus, pricing, and images on their own.</li>
+          <li>Delivered the project 10% under budget while exceeding the client's requirements.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Web Sales &amp; E-commerce Designer</h3>
+          <span class="job-date">01/2021 – 01/2022</span>
+        </div>
+        <p class="job-org">Materiales Castell · Guadalajara</p>
+        <ul>
+          <li>Integrated CRM and ERP systems to attract new customers and streamline task management.</li>
+          <li>Wrote technical documentation with precise vocabulary and adherence to industry metrics.</li>
+          <li>Designed and programmed a responsive website, including the logo and brand identity.</li>
+          <li>Increased online conversions by 28% by simplifying the user experience and checkout flow.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Bilingual Agent — WAHA</h3>
+          <span class="job-date">02/2019 – 02/2020</span>
+        </div>
+        <p class="job-org">Teleperformance · Guadalajara</p>
+        <ul>
+          <li>Retained 85% of customers who were considering cancellation by putting together personalized service packages.</li>
+          <li>Sold mobile service lines by showing the cost savings of bundling with Comcast Xfinity.</li>
+          <li>Resolved technical support issues with clear, step-by-step troubleshooting.</li>
+          <li>Managed billing inquiries and spotted upsell opportunities, raising average revenue per customer by 22%.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Systems Designer</h3>
+          <span class="job-date">2018 – 2019</span>
+        </div>
+        <p class="job-org">Corporativo Internacional Especializado (CIE) · Manzanillo</p>
+        <ul>
+          <li>Developed targeted advertising campaigns highlighting regulatory updates relevant to customers.</li>
+          <li>Used the CRM to segment and engage the customer base, lifting customer retention by 15%.</li>
+          <li>Wrote technical documentation with consistent terminology and precise measurement standards.</li>
+          <li>Designed and programmed the company website, including complete branding packages.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Customs Request Performance Analyst</h3>
+          <span class="job-date">01/2017 – 01/2018</span>
+        </div>
+        <p class="job-org">Corporativo Internacional Especializado (CIE) · Manzanillo</p>
+        <ul>
+          <li>Implemented a KPI system for monitoring customs shipment requests, improving processing efficiency by 30%.</li>
+          <li>Developed a metrics framework to measure progress and track operational performance.</li>
+          <li>Created an analytical reporting structure to identify trends and optimize workflows.</li>
+          <li>Aligned monitoring systems with customs agency requirements and organizational goals.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Email Marketing Manager</h3>
+          <span class="job-date">02/2017 – 02/2019</span>
+        </div>
+        <p class="job-org">Transportes Rino · Manzanillo</p>
+        <ul>
+          <li>Created informative content campaigns focused on regulatory updates relevant to the target audience.</li>
+          <li>Managed the CRM for customer acquisition, engagement, and reactivation.</li>
+          <li>Kept technical language and measurement standards consistent across all communications.</li>
+          <li>Designed the complete brand identity: website, logo, and corporate color palette.</li>
+        </ul>
+      </article>
+
+      <article class="job reveal">
+        <span class="job-node" aria-hidden="true"></span>
+        <div class="job-head">
+          <h3>Computer &amp; Mobile Device Repair — Business Owner</h3>
+          <span class="job-date">01/2015 – 01/2017</span>
+        </div>
+        <p class="job-org">Self-employed · Manzanillo</p>
+        <ul>
+          <li>Founded and ran a computer and mobile repair service.</li>
+          <li>Specialized in custom computer assembly using multi-vendor hardware components.</li>
+          <li>Diagnosed hardware issues and performed component replacements with 98% customer satisfaction.</li>
+          <li>Explained complex technical concepts to customers in clear, accessible language.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <p class="eyebrow reveal">Technical Skills</p>
+    <div class="skills-grid reveal-group">
+      <div class="skill-card reveal">
+        <h3>AI &amp; Automation</h3>
+        <p>Python, LLM APIs, OCR / vision models, prompt and pipeline design, AI-assisted coding, process automation.</p>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Data &amp; Analysis</h3>
+        <p>Advanced Microsoft Excel (formulas, data analysis), SQL, Power BI, KPI dashboard development.</p>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Systems &amp; Management Tools</h3>
+        <p>CRM implementation (Salesforce, Bitrix24), ERP configuration, MDM administration, API integrations.</p>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Web &amp; Design</h3>
+        <p>HTML, CSS, responsive website architecture, SEO, e-commerce platform design, Adobe Illustrator, Photoshop, Premiere Pro.</p>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Hardware &amp; Technical Systems</h3>
+        <p>Electrical engineering, electronics, automation systems, operating systems, hardware diagnostics and repair.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="strengths">
+  <div class="container">
+    <p class="eyebrow reveal">Core Strengths</p>
+    <div class="strengths-grid reveal-group">
+      <div class="strength reveal">
+        <h3>Technical Problem-Solving</h3>
+        <p>Exceptional ability to diagnose and resolve complex technical issues with structured, repeatable methodologies.</p>
+      </div>
+      <div class="strength reveal">
+        <h3>Customer Relationship Management</h3>
+        <p>Skilled at building rapport and preserving customer loyalty through personalized solutions.</p>
+      </div>
+      <div class="strength reveal">
+        <h3>Cross-Functional Collaboration</h3>
+        <p>Experience leading mixed teams of technical and business people to ship integrated systems.</p>
+      </div>
+      <div class="strength reveal">
+        <h3>Process Optimization</h3>
+        <p>Talent for identifying inefficiencies and implementing streamlined workflows that measurably raise productivity.</p>
+      </div>
+      <div class="strength reveal">
+        <h3>Bilingual Communication</h3>
+        <p>Fluent in translating technical concepts into clear, accessible language for any audience, in English or Spanish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="additional">
+  <div class="container">
+    <p class="eyebrow reveal">Additional Skills</p>
+    <div class="skills-grid reveal-group">
+      <div class="skill-card reveal">
+        <h3>Technical Expertise</h3>
+        <p>Advanced Excel, SQL, HTML, CSS, APIs, Power BI · user documentation creation and maintenance · technical support and field service management · process improvement and KPI management · CRM and ERP implementation · system troubleshooting and workflow optimization.</p>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Software Proficiency</h3>
+        <p>Adobe Illustrator, Photoshop, Premiere Pro · Microsoft Excel and Office Suite · CRM and ERP systems · email marketing platforms · SEO and digital marketing tools · AI tools, coding, and building web applications (CRMs, training platform modules).</p>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Professional Capabilities</h3>
+        <p>Bilingual customer service (English C1, Spanish native) · team collaboration and leadership · problem-solving and critical thinking · adaptability to fast-paced environments · effective communication and organization.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-education" id="education">
+  <div class="container">
+    <div class="edu-lang-grid">
+      <div class="edu-col">
+        <p class="eyebrow reveal">Education</p>
+        <div class="edu-card reveal">
+          <h3>Bachelor of Digital Business Management</h3>
+          <p class="edu-org">Universidad de Colima (UCOL), Campus FCAM</p>
+          <p class="edu-date">01/2015 – 01/2019</p>
+          <p>Focus on strategic business creation and management in a global economy; specialized in information and communication technologies for systems management.</p>
+        </div>
+        <div class="edu-card reveal">
+          <h3>Computer Programming &amp; Hardware Maintenance Technician</h3>
+          <p class="edu-org">CEIP · Manzanillo</p>
+          <p class="edu-date">01/2017 – 01/2020</p>
+          <p>Analyst programmer technician certification; specialized training in hardware diagnostics and maintenance.</p>
+        </div>
+      </div>
+      <div class="lang-col">
+        <p class="eyebrow reveal">Languages</p>
+        <div class="edu-card reveal">
+          <h3>Spanish</h3>
+          <p>Native</p>
+        </div>
+        <div class="edu-card reveal">
+          <h3>English</h3>
+          <p>C1 Advanced — <a class="text-link" href="https://efset.org/cert/4WxFUS" target="_blank" rel="noopener">EF SET Certificate (efset.org/cert/4WxFUS)</a>, The Pyramid School, Manzanillo (2017 – 2020)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer section-dark" id="contact">
+  <div class="container">
+    <p class="eyebrow reveal">Contact</p>
+    <a class="footer-email reveal" href="mailto:bpperez815@gmail.com">bpperez815@gmail.com</a>
+    <div class="footer-grid reveal">
+      <div class="footer-item">
+        <span class="footer-label">Address</span>
+        <span>Escorza 760A, Guadalajara, Jalisco, México</span>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label">Phone</span>
+        <a href="tel:+523333371063">33 3337 1063</a>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label">Work email</span>
+        <a href="mailto:Blas@transportesrino.com">Blas@transportesrino.com</a>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label">Fecha de nacimiento</span>
+        <span>22/03/1995</span>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label">LinkedIn</span>
+        <a href="https://linkedin.com/in/bpecha" target="_blank" rel="noopener">linkedin.com/in/bpecha</a>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label">GitHub</span>
+        <a href="https://github.com/blasperez" target="_blank" rel="noopener">github.com/blasperez</a>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label">Website</span>
+        <a href="https://blasperez.github.io/BlasPerezCV" target="_blank" rel="noopener">blasperez.github.io/BlasPerezCV</a>
+      </div>
+      <div class="footer-item">
+        <span class="footer-label">CV</span>
+        <a href="Blas-Perez-CV.pdf" download>Download PDF</a>
+      </div>
+    </div>
+    <p class="footer-bottom reveal">© 2026 Blas Antonio Pérez Chávez · Guadalajara · Manzanillo · México</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>

@@ -1,18 +1,7 @@
-# Blas Pérez Curriculum
+# Blas Antonio Pérez Chávez — CV
 
-This repository contains the React + Vite resume/portfolio that powers [https://blasperez.github.io/BlasPerezCV](https://blasperez.github.io/BlasPerezCV). The project uses Tailwind CSS for utility styling and lucide-react for the iconography.
+Online CV, live at **[blasperez.github.io/BlasPerezCV](https://blasperez.github.io/BlasPerezCV/)**.
 
-## Local development
+Static site (HTML/CSS/JS, no build step). Content mirrors [`Blas-Perez-CV.pdf`](Blas-Perez-CV.pdf) verbatim.
 
-1. `npm install`
-2. `npm run dev`
-
-The dev server runs on `http://localhost:5173` by default.
-
-## Building for GitHub Pages
-
-```
-npm run build
-```
-
-`vite.config.js` sets the `base` to `/BlasPerezCV/` when `NODE_ENV === production`, so the generated assets resolve correctly on `https://blasperez.github.io/BlasPerezCV/`.
+Deployed automatically to GitHub Pages on every push to `main` via GitHub Actions.
